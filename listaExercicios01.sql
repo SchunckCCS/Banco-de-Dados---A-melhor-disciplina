@@ -48,3 +48,11 @@ FROM transacoes
 GROUP BY produto
 HAVING SUM(receita) > 10000;
 
+--10
+SELECT autores.nome AS autor, COUNT(livros.id) AS total_livros
+FROM autores
+LEFT JOIN livros ON autores.id = livros.id_autor
+GROUP BY autores.nome
+HAVING COUNT(livros.id) > 2;
+
+
