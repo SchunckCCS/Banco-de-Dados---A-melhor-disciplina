@@ -42,3 +42,9 @@ SELECT produto, AVG(receita) AS media_receita
 FROM transacoes
 GROUP BY produto;
 
+--09
+SELECT produto, SUM(receita) AS receita_total
+FROM transacoes
+GROUP BY produto
+HAVING SUM(receita) > 10000;
+
