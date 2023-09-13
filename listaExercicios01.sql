@@ -75,3 +75,7 @@ SELECT alunos.nome_aluno, matriculas.curso
 FROM alunos
 RIGHT JOIN matriculas ON alunos.id = matriculas.id_aluno;
 
+--15
+SELECT alunos.nome_aluno, matriculas.curso
+FROM alunos
+INNER JOIN matriculas ON alunos.id = matriculas.id_aluno;
