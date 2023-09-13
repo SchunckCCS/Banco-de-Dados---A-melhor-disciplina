@@ -94,3 +94,10 @@ FROM transacoes
 GROUP BY produto
 ORDER BY receita_total ASC
 LIMIT 1;
+
+--19
+SELECT alunos.nome_aluno, COUNT(matriculas.id) AS total_matriculas
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.id_aluno
+GROUP BY alunos.nome_aluno;
+
