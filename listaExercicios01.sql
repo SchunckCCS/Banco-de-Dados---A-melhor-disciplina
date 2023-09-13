@@ -107,4 +107,9 @@ FROM autores
 LEFT JOIN livros ON autores.id = livros.id_autor
 GROUP BY autores.nome;
 
-
+--20
+SELECT produto, COUNT(id) AS quantidade_transacoes
+FROM transacoes
+GROUP BY produto
+ORDER BY quantidade_transacoes DESC
+LIMIT 1;
