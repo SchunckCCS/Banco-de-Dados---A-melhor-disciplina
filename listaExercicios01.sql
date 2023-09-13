@@ -87,3 +87,10 @@ LEFT JOIN livros ON autores.id = livros.id_autor
 GROUP BY autores.nome
 ORDER BY total_livros DESC
 LIMIT 1;
+
+--17
+SELECT produto, SUM(receita) AS receita_total
+FROM transacoes
+GROUP BY produto
+ORDER BY receita_total ASC
+LIMIT 1;
