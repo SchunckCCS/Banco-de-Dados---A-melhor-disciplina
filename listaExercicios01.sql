@@ -15,3 +15,9 @@ WHERE id_autor = (
   FROM autores
   WHERE nome = 'J.K. Rowling'
 );
+
+--04
+SELECT nome_aluno
+FROM alunos
+WHERE curso = 'Engenharia de Software';
+
