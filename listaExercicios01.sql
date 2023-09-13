@@ -21,3 +21,8 @@ SELECT nome_aluno
 FROM alunos
 WHERE curso = 'Engenharia de Software';
 
+--05
+SELECT produto, SUM(receita) AS receita_total
+FROM transacoes
+GROUP BY produto;
+
