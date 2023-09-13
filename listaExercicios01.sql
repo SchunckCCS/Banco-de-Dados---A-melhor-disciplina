@@ -95,9 +95,16 @@ GROUP BY produto
 ORDER BY receita_total ASC
 LIMIT 1;
 
+--18
+SELECT autores.nome AS autor, COUNT(livros.id) AS total_livros, COUNT(livros.id) * 20 AS receita_total
+FROM autores
+LEFT JOIN livros ON autores.id = livros.id_autor
+GROUP BY autores.nome;
+
 --19
-SELECT alunos.nome_aluno, COUNT(matriculas.id) AS total_matriculas
-FROM alunos
-LEFT JOIN matriculas ON alunos.id = matriculas.id_aluno
-GROUP BY alunos.nome_aluno;
+SELECT autores.nome AS autor, COUNT(livros.id) AS total_livros, COUNT(livros.id) * 20 AS receita_total
+FROM autores
+LEFT JOIN livros ON autores.id = livros.id_autor
+GROUP BY autores.nome;
+
 
