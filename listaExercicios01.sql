@@ -36,3 +36,9 @@ GROUP BY autores.nome;
 SELECT curso, COUNT(nome_aluno) AS total_alunos
 FROM alunos
 GROUP BY curso;
+
+--08
+SELECT produto, AVG(receita) AS media_receita
+FROM transacoes
+GROUP BY produto;
+
