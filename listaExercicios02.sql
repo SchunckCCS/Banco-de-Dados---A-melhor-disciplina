@@ -36,3 +36,12 @@ BEGIN
         SELECT 'Não' AS CategoriaPossuiLivros;
 END;
 
+--05
+CREATE PROCEDURE sp_LivrosAteAno
+    @AnoPublicacao INT
+AS
+BEGIN
+    SELECT Titulo
+    FROM Livros
+    WHERE AnoPublicacao <= @AnoPublicacao;
+END;
