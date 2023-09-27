@@ -14,3 +14,14 @@ BEGIN
     FROM Livros
     WHERE Categoria = @Categoria;
 END;
+
+--03
+CREATE PROCEDURE sp_ContarLivrosPorCategoria
+    @Categoria NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(*) AS TotalLivros
+    FROM Livros
+    WHERE Categoria = @Categoria;
+END;
+
