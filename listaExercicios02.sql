@@ -83,3 +83,10 @@ BEGIN
     ORDER BY DataNascimento ASC;
 END;
 
+--09
+CREATE PROCEDURE sp_ListarAutores
+AS
+BEGIN
+    SELECT Nome, Sobrenome FROM Autores;
+END;
+
