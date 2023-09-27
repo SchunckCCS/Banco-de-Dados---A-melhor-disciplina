@@ -25,3 +25,14 @@ BEGIN
     WHERE Categoria = @Categoria;
 END;
 
+--04
+CREATE PROCEDURE sp_VerificarLivrosCategoria
+    @Categoria NVARCHAR(50)
+AS
+BEGIN
+    IF EXISTS (SELECT 1 FROM Livros WHERE Categoria = @Categoria)
+        SELECT 'Sim' AS CategoriaPossuiLivros;
+    ELSE
+        SELECT 'Não' AS CategoriaPossuiLivros;
+END;
+
