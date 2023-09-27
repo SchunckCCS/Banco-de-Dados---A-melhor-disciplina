@@ -45,3 +45,14 @@ BEGIN
     FROM Livros
     WHERE AnoPublicacao <= @AnoPublicacao;
 END;
+
+--06
+CREATE PROCEDURE sp_TitulosPorCategoria
+    @Categoria NVARCHAR(50)
+AS
+BEGIN
+    SELECT Titulo
+    FROM Livros
+    WHERE Categoria = @Categoria;
+END;
+
