@@ -90,3 +90,13 @@ BEGIN
     SELECT Nome, Sobrenome FROM Autores;
 END;
 
+--10
+CREATE PROCEDURE sp_LivrosESeusAutores
+AS
+BEGIN
+    SELECT L.Titulo, A.Nome, A.Sobrenome
+    FROM Livros L
+    INNER JOIN Autores A ON L.AutorID = A.AutorID;
+END;
+
+
