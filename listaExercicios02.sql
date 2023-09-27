@@ -56,3 +56,22 @@ BEGIN
     WHERE Categoria = @Categoria;
 END;
 
+--07
+CREATE PROCEDURE sp_AdicionarLivro
+    @Titulo NVARCHAR(100),
+    @AutorID INT,
+    @Categoria NVARCHAR(50),
+    @AnoPublicacao INT
+AS
+BEGIN
+    BEGIN TRY
+        INSERT INTO Livros (Titulo, AutorID, Categoria, AnoPublicacao)
+        VALUES (@Titulo, @AutorID, @Categoria, @AnoPublicacao);
+        SELECT 'Livro adicionado com sucesso.' AS Mensagem;
+    END TRY
+    BEGIN CATCH
+        SELECT 'Erro: ' + ERROR_MESSAGE() AS Mensagem;
+    END CATCH;
+END;
+
+
